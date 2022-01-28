@@ -11,10 +11,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
   <script>
     tailwind.config = {
       theme: {
@@ -72,23 +68,33 @@ to their brand.</p>
         <span class="bg-[url('images/mobile/image-curiosity.jpg')] md:bg-[url('images/desktop/image-curiosity.jpg')] bg-cover flex w-full h-36 p-5 pt-16">The<br>curiosity</span>
         <span class="bg-[url('images/mobile/image-fisheye.jpg')] md:bg-[url('images/desktop/image-fisheye.jpg')] bg-cover flex w-full h-36 p-5 pt-16">Make it<br>fisheye</span>
       </div>
-      <button class="uppercase tracking-widest border border-black px-8 py-2 m-auto my-7 text-sm text-center">See all</button>
+      <button class="uppercase tracking-widest border border-black px-8 py-2 mx-auto my-7 text-sm text-center">See all</button>
     </section>
+    <footer class="flex flex-col bg-black items-center justify-center text-center w-full text-white py-12 mt-12">
+      <div>
+        <img src="images/logo.svg" alt="">
+        <ul class="space-y-3 my-5 text-sm">
+          <li class="">About</li>
+          <li class="">Careers</li>
+          <li class="">Events</li>
+          <li class=""></li>Products</li>
+          <li class="">Support</li>
+        </ul>
+      </div>
+      <div>
+        <div class="flex justify-center space-x-3 m-auto mt-8 mb-6">
+          <img src="images/icon-facebook.svg" alt="">
+          <img src="images/icon-twitter.svg" alt="">
+          <img src="images/icon-pinterest.svg" alt="">
+          <img src="images/icon-instagram.svg" alt="">
+        </div>
+        <p class="text-darkGray font-medium text-sm">© 2021 Loopstudios. All rights reserved.</p>
+      </div>
+    </footer>
   </main>
-
-  
-
-  About
-  Careers
-  Events
-  Products
-  Support
-
-  © 2021 Loopstudios. All rights reserved.
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer class="bg-black text-darkGray text-center text-[14px]">
+    Challenge by <a class="text-indigo-500" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a class="text-indigo-500" href="#">cyberGenie</a>.
+  </footer>
 </body>
 </html>
