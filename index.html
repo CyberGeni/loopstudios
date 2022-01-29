@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <script>
     tailwind.config = {
       theme: {
@@ -26,75 +25,84 @@
 </head>
 <body class="font-['Alata']">
   <main class="">
-    <header class="flex flex-col bg-[url('images/mobile/image-hero.jpg')] md:bg-[url('images/desktop/image-hero.jpg')] bg-cover bg-no-repeat bg-center h-screen">
-      <nav class="flex justify-between px-6 py-8">
+    <header class="flex flex-col bg-[url('images/mobile/image-hero.jpg')] md:bg-[url('images/desktop/image-hero.jpg')] bg-cover bg-no-repeat bg-center h-screen active:bg-black active:overflow-hidden">
+      <nav class="flex justify-between px-6 py-8 md:px-16 lg:px-24 md:py-8 active:bg-black">
         <img src="images/logo.svg" alt="">
-        <ul class="flex list-none hidden">
-          <li>About</li>
-          <li>Careers</li>
-          <li>Events</li>
-          <li>Products</li>
-          <li>Support</li>
+        <ul class="flex list-none hidden md:flex text-white space-x-5 transition-all">
+          <li class="hover:underline hover:underline-offset-4 hover:decoration-3">About</li>
+          <li class="hover:underline hover:underline-offset-4 hover:decoration-3">Careers</li>
+          <li class="hover:underline hover:underline-offset-4 hover:decoration-3">Events</li>
+          <li class="hover:underline hover:underline-offset-4 hover:decoration-3">Products</li>
+          <li class="hover:underline hover:underline-offset-4 hover:decoration-3">Support</li>
         </ul>
-        <img src="images/menu.svg" alt="">
+        <img class="block md:hidden" id="toggleButton" src="images/menu.svg" alt="" onclick="toggle()">
       </nav>
-      <div class="font-['Josefin_Sans'] flex flex-col text-4xl font-light border-2 p-6 mx-6 my-auto max-w-2xl uppercase text-white leading-none">
+      <div class="font-['Josefin_Sans'] flex flex-col text-4xl md:text-5xl font-light border-2 p-6 mx-6 md:mx-16 lg:mx-24 my-auto max-w-2xl uppercase text-white leading-none">
         <span>Immersive</span>
         <span>experiences</span>
         <span>that</span>
         <span>deliver</span>
       </div>     
     </header>
-    <section class="px-6 py-16">
+    <section class="px-6 py-16 md:px-16 lg:px-24 lg:flex lg:flex-row">
       <img src="images/mobile/image-interactive.jpg" alt="">
-      <h1 class="uppercase text-2xl text-center text-black font-medium font-['Josefin_Sans'] max-w-5/6 my-6">The leader in interactive VR</h1>
-      <p class="text-center text-darkGray w-5/6 m-auto">Founded in 2011, Loopstudios has been producing world-class virtual reality 
-projects for some of the best companies around the globe. Our award-winning 
-creations have transformed businesses through digital experiences that bind 
+      <div class="lg:bg-white lg:pt-6 lg:pl-20 lg:relative lg:flex lg:flex-col lg:self-end lg:ml-[-9em]">
+        <h1 class="lg:text-4xl lg:text-left uppercase text-2xl text-center text-black font-medium font-['Josefin_Sans'] max-w-5/6 my-6">The leader in interactive VR</h1>
+        <p class="text-center text-darkGray w-5/6 lg:w-full m-auto lg:m-0 lg:text-left">Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best companies around the globe. Our award-winning creations have transformed businesses through digital experiences that bind 
 to their brand.</p>
-    </section>
-    <section class="px-6">
-      <div>
-        <h1 class="uppercase text-2xl text-center text-black font-medium font-['Josefin_Sans'] max-w-5/6 my-6">Our creations</h1>
-        <button class="hidden">See all</button>
       </div>
-      <div class="font-['Josefin_Sans'] uppercase text-2xl text-white font-light space-y-6">
-        <span class="bg-[url('images/mobile/image-deep-earth.jpg')] md:bg-[url('images/desktop/image-deep-earth.jpg')] bg-cover flex w-full h-36 p-5 pt-16">Deep<br>earth</span>
-        <span class="bg-[url('images/mobile/image-night-arcade.jpg')] md:bg-[url('images/desktop/image-night-arcade.jpg')] bg-cover flex w-full h-36 p-5 pt-16">Night<br>arcade</span>
-        <span class="bg-[url('images/mobile/image-soccer-team.jpg')] md:bg-[url('images/desktop/soccer-team.jpg')] bg-cover flex w-full h-36 p-5 pt-16">Soccer<br>team VR</span>
-        <span class="bg-[url('images/mobile/image-grid.jpg')] md:bg-[url('images/desktop/image-grid.jpg')] bg-cover flex w-full h-36 p-5 pt-16">The<br>grid</span>
-        <span class="bg-[url('images/mobile/image-from-above.jpg')] md:bg-[url('images/desktop/image-from-above.jpg')] bg-cover flex w-full h-36 p-5 pt-16">From up<br>above VR</span>
-        <span class="bg-[url('images/mobile/image-pocket-borealis.jpg')] md:bg-[url('images/desktop/image-pocket-borealis.jpg')] bg-cover flex w-full h-36 p-5 pt-16">Pocket<br>borealis</span>
-        <span class="bg-[url('images/mobile/image-curiosity.jpg')] md:bg-[url('images/desktop/image-curiosity.jpg')] bg-cover flex w-full h-36 p-5 pt-16">The<br>curiosity</span>
-        <span class="bg-[url('images/mobile/image-fisheye.jpg')] md:bg-[url('images/desktop/image-fisheye.jpg')] bg-cover flex w-full h-36 p-5 pt-16">Make it<br>fisheye</span>
-      </div>
-      <button class="uppercase tracking-widest border border-black px-8 py-2 mx-auto my-7 text-sm text-center">See all</button>
+      
     </section>
-    <footer class="flex flex-col bg-black items-center justify-center text-center w-full text-white py-12 mt-12">
+    <section class="px-6 md:px-16 lg:px-24">
+      <div class="md:flex md:justify-between md:items:center h-fit my-6">
+        <h1 class="uppercase text-2xl text-center text-black font-medium font-['Josefin_Sans'] max-w-5/6 ">Our creations</h1>
+        <button class="hidden md:block uppercase tracking-widest border border-black px-8 py-2 h-fit text-sm text-center hover:bg-black hover:text-white">See all</button>
+      </div>
+      <div class="font-['Josefin_Sans'] uppercase text-2xl text-white font-light space-y-6 md:grid md:grid-cols-4 md:gap-4 md:space-y-0">
+        <span class="bg-[url('images/mobile/image-deep-earth.jpg')] md:bg-[url('images/desktop/image-deep-earth.jpg')] bg-cover flex w-full h-36 md:h-72  p-5 pt-16 md:pt-52">Deep<br>earth</span>
+        <span class="bg-[url('images/mobile/image-night-arcade.jpg')] md:bg-[url('images/desktop/image-night-arcade.jpg')] bg-cover flex w-full h-36 md:h-72 p-5 pt-16 md:pt-52">Night<br>arcade</span>
+        <span class="bg-[url('images/mobile/image-soccer-team.jpg')] md:bg-[url('images/desktop/image-soccer-team.jpg')] bg-cover flex w-full h-36 md:h-72 p-5 pt-16 md:pt-52">Soccer<br>team VR</span>
+        <span class="bg-[url('images/mobile/image-grid.jpg')] md:bg-[url('images/desktop/image-grid.jpg')] bg-cover flex w-full h-36 md:h-72 p-5 pt-16 md:pt-52">The<br>grid</span>
+        <span class="bg-[url('images/mobile/image-from-above.jpg')] md:bg-[url('images/desktop/image-from-above.jpg')] bg-cover flex w-full h-36 md:h-72 p-5 pt-16 md:pt-52">From up<br>above VR</span>
+        <span class="bg-[url('images/mobile/image-pocket-borealis.jpg')] md:bg-[url('images/desktop/image-pocket-borealis.jpg')] bg-cover flex w-full h-36 md:h-72 p-5 pt-16 md:pt-52">Pocket<br>borealis</span>
+        <span class="bg-[url('images/mobile/image-curiosity.jpg')] md:bg-[url('images/desktop/image-curiosity.jpg')] bg-cover flex w-full h-36 md:h-72 p-5 pt-16 md:pt-52">The<br>curiosity</span>
+        <span class="bg-[url('images/mobile/image-fisheye.jpg')] md:bg-[url('images/desktop/image-fisheye.jpg')] bg-cover flex w-full h-36 md:h-72 p-5 pt-16 md:pt-52">Make it<br>fisheye</span>
+      </div>
+      <div class="flex justify-center w-full"> 
+        <button class="uppercase tracking-widest border border-black px-8 py-2 mx-auto my-7 text-sm text-center md:hidden hover:bg-black hover:text-white">See all</button>
+      </div>
+    </section>
+    <footer class="flex flex-col bg-black items-center justify-center text-center w-full text-white px-24 py-12 mt-12  lg:flex-row lg:justify-between">
       <div>
         <img src="images/logo.svg" alt="">
-        <ul class="space-y-3 my-5 text-sm">
+        <ul class="space-y-3 my-5 text-sm lg:flex lg:space-y-0 lg:space-x-5">
           <li class="">About</li>
           <li class="">Careers</li>
           <li class="">Events</li>
-          <li class=""></li>Products</li>
+          <li class="">Products</li>
           <li class="">Support</li>
         </ul>
       </div>
       <div>
-        <div class="flex justify-center space-x-3 m-auto mt-8 mb-6">
+        <div class="flex justify-center lg:justify-end space-x-3 m-auto mt-8 mb-6">
           <img src="images/icon-facebook.svg" alt="">
           <img src="images/icon-twitter.svg" alt="">
           <img src="images/icon-pinterest.svg" alt="">
           <img src="images/icon-instagram.svg" alt="">
         </div>
-        <p class="text-darkGray font-medium text-sm">© 2021 Loopstudios. All rights reserved.</p>
-      </div>
+        <p class="text-veryDarkGray">&copy; 2021 Loopstudios. All rights reserved</p>
+    </div>
     </footer>
   </main>
-  <footer class="bg-black text-darkGray text-center text-[14px]">
+  <footer class="bg-black text-darkGray text-center text-[14px] pb-2">
     Challenge by <a class="text-indigo-500" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a class="text-indigo-500" href="#">cyberGenie</a>.
+    Coded by <a class="text-indigo-500" href="https://github.com/cybergeni">cyberGenie</a>.
   </footer>
+  <script>
+    function toggle() {
+      var header = document.getElementsByClassName("nav");
+      header.classList.toggle("active");
+}
+  </script>
 </body>
 </html>
